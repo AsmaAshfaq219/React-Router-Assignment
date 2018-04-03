@@ -1,0 +1,15 @@
+.App ul>li  {
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.Navbar a {
+    color: black;
+    text-decoration: none;
+}
+
+.Navbar a:hover,
+.Navbar a:active,
+.Navbar a.active{
+    color: orangered;
+}
