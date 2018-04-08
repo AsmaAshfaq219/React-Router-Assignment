@@ -26,14 +26,14 @@ class Courses extends Component {
                                 key={course.id}
                                 onClick={() => {
                                     this.props.history.push({
-                                        pathname: '/' + course.id + '/' + course.title,
+                                        pathname: '/courses/' + course.id + '/' + course.title,
                                     })
                                 }}>
                                 {course.title}</article>
                         })
                     }
                 </section>
-                <Route path='/:id/:title' component={Course} />
+                <Route path='/courses/:id/:title' component={Course} />
             </div>
         );
     }

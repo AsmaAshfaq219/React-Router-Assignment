@@ -13,16 +13,16 @@ class App extends Component {
         <div className="App">
           <header>
             <ul className="Navbar">
-              <li><NavLink to='/' exact>Courses</NavLink></li>
+              <li><NavLink to='/courses'>Courses</NavLink></li>
               <li><NavLink to='/users' >Users</NavLink></li>
             </ul>
           </header>
           <Switch>
             <Route path='/users' component={Users} />
             {/* <Route path='/:id/:title' component={Course} /> */}
-            <Redirect from='/courses' to='/' />
-            <Route path='/' component={Courses} />
-            <Route render={()=> <h1>Page not found</h1>} />
+            <Route path='/courses' component={Courses} />
+            <Redirect from='/' exact to='/courses' />
+            <Route render={() => <h1>Page not found</h1>} />
           </Switch>
         </div>
       </BrowserRouter>
